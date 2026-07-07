@@ -1,15 +1,17 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const playfair = Playfair_Display({
+  variable: '--font-playfair',
   subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -19,21 +21,13 @@ export const metadata: Metadata = {
   },
   description:
     'Professional photography and videography portfolio by Chiranjibi Khanal. Weddings, portraits, events, and commercial projects.',
-  keywords: [
-    'photographer',
-    'videographer',
-    'portfolio',
-    'Chiranjibi Khanal',
-    'wedding photography',
-    'portrait photography',
-  ],
-  authors: [{ name: 'Chiranjibi Khanal' }],
   openGraph: {
     title: 'Chiranjibi Khanal — Photographer & Videographer',
     description:
       'Professional photography and videography portfolio.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'Chiranjibi Khanal',
   },
 };
 
@@ -45,9 +39,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${inter.variable} ${playfair.variable}`}
     >
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="min-h-screen flex flex-col bg-bg text-text antialiased">
         {children}
       </body>
     </html>
