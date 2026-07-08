@@ -1,57 +1,45 @@
+import SectionTitle from '@/components/features/SectionTitle';
+import ScrollReveal from '@/components/features/ScrollReveal';
+
 const services = [
-  {
-    title: 'Photography',
-    description:
-      'Portraits, weddings, events, commercial shoots, and fine art photography. Every session is approached with an eye for light, composition, and authentic emotion.',
-    items: ['Portrait Photography', 'Wedding & Events', 'Commercial', 'Fine Art'],
-  },
-  {
-    title: 'Videography',
-    description:
-      'Cinematic films for weddings, brand stories, music videos, and documentaries. From concept to final cut, each project is crafted with narrative intent.',
-    items: ['Wedding Films', 'Brand Stories', 'Music Videos', 'Documentaries'],
-  },
-  {
-    title: 'Post-Production',
-    description:
-      'Professional editing, color grading, and retouching services. Bringing out the best in every frame through meticulous attention to detail.',
-    items: ['Color Grading', 'Photo Retouching', 'Video Editing', 'Sound Design'],
-  },
+  { title: 'Film', desc: 'Cinematic films for brands, documentaries, music videos, and narrative projects. From concept through post-production.' },
+  { title: 'Commercial', desc: 'High-production-value commercial content for agencies and global brands.' },
+  { title: 'Wedding', desc: 'Authentic, emotionally-driven wedding films and editorial photography.' },
+  { title: 'Portrait', desc: 'Editorial portraits and personal branding sessions with a cinematic eye.' },
+  { title: 'Post-Production', desc: 'Color grading, sound design, editing, and finishing for any project.' },
 ];
 
 export default function ServicesPage() {
   return (
-    <>
-      {/* Header */}
-      <section className="pt-36 pb-12 md:pt-44 md:pb-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <p className="section-label">Services</p>
-        </div>
-      </section>
+    <section className="min-h-screen pt-36 section container-wide">
+      <SectionTitle as="h1" label="Services" delay={0}>
+        What I do.
+      </SectionTitle>
 
-      {/* Service Cards */}
-      <section className="max-w-7xl mx-auto px-6 pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
-          {services.map((service) => (
-            <div key={service.title} className="bg-bg p-8 md:p-10">
-              <h2 className="font-serif text-2xl md:text-3xl text-text mb-5">
-                {service.title}
-              </h2>
-              <p className="text-text-secondary text-sm leading-relaxed mb-8">
-                {service.description}
+      <div className="mt-20 md:mt-32 space-y-0">
+        {services.map((s, i) => (
+          <ScrollReveal key={s.title} delay={i * 80}>
+            <div className="group flex items-start md:items-center justify-between py-10 md:py-12 border-t border-border cursor-default">
+              <p className="text-text" style={{ fontSize: 'clamp(36px, 4.5vw, 80px)', fontWeight: 500, lineHeight: 1.1 }}>
+                {s.title}
               </p>
-              <ul className="space-y-2">
-                {service.items.map((item) => (
-                  <li key={item} className="text-text-muted text-sm flex items-center gap-3">
-                    <span className="w-1 h-1 rounded-full bg-text-muted" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <div className="hidden md:block max-w-[400px]">
+                <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
+              </div>
+              <span className="text-text-muted group-hover:text-text transition-all duration-300 text-3xl">→</span>
             </div>
-          ))}
-        </div>
-      </section>
-    </>
+          </ScrollReveal>
+        ))}
+      </div>
+
+      {/* Mobile descriptions */}
+      <div className="md:hidden mt-12 space-y-6">
+        {services.map((s, i) => (
+          <ScrollReveal key={s.title} delay={i * 80}>
+            <p className="text-text-secondary text-sm leading-relaxed py-4 border-t border-border">{s.desc}</p>
+          </ScrollReveal>
+        ))}
+      </div>
+    </section>
   );
 }
