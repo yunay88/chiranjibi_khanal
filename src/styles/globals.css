@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+@theme {
+  /* === BACKGROUNDS === */
+  --color-bg: #0F1115;
+  --color-bg-sidebar: #111418;
+  --color-surface: #181C23;
+  --color-surface-hover: #1E2330;
+  --color-surface-active: #252B3A;
+
+  /* === BORDERS === */
+  --color-border: #2A2F38;
+  --color-border-hover: #3A4455;
+  --color-border-active: #3B82F6;
+
+  /* === TEXT === */
+  --color-text: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+  --color-text-placeholder: #7C8596;
+
+  /* === BRAND === */
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-primary-pressed: #1E40AF;
+  --color-primary-glow: rgba(37, 99, 235, 0.15);
+
+  /* === STATUS === */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  /* === RADII === */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+
+  /* === FONTS === */
+  --font-sans: 'Inter', 'Geist', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* === SPACING (8px grid) === */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+}
+
+/* === GLOBAL RESET === */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: auto; -webkit-font-smoothing: antialiased; }
+body { background: var(--color-bg); color: var(--color-text); font-family: var(--font-sans); overflow-x: hidden; }
+::selection { background: var(--color-primary-glow); color: var(--color-text); }
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-border-hover); }
+* { scrollbar-width: thin; scrollbar-color: var(--color-border) transparent; }
+
+/* === FOCUS === */
+*:focus-visible { outline: 2px solid var(--color-border-active); outline-offset: 2px; border-radius: var(--radius-xs); }
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

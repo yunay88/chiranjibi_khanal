@@ -1,0 +1,118 @@
+[
+  {
+    "id": "1",
+    "title": "Echoes of Everest",
+    "slug": "echoes-of-everest",
+    "category": "film",
+    "year": 2025,
+    "location": "Khumbu, Nepal",
+    "description": "A cinematic journey through the Khumbu Valley, capturing the raw beauty of the Himalayas and the communities that call them home.",
+    "coverImage": "/projects/echoes-everest.svg",
+    "images": [
+      "/projects/echoes-everest.svg",
+      "/projects/echoes-everest.svg",
+      "/projects/echoes-everest.svg"
+    ],
+    "featured": true,
+    "credits": [
+      {
+        "role": "Director",
+        "name": "Chiranjibi Khanal"
+      },
+      {
+        "role": "Cinematographer",
+        "name": "Chiranjibi Khanal"
+      }
+    ],
+    "updatedAt": "2026-07-18T07:45:52.593Z"
+  },
+  {
+    "id": "2",
+    "title": "Kathmandu Stories",
+    "slug": "kathmandu-stories",
+    "category": "photography",
+    "year": 2025,
+    "location": "Kathmandu, Nepal",
+    "description": "An intimate portrait series capturing the soul of the valley.",
+    "coverImage": "/projects/kathmandu-stories.svg",
+    "images": [
+      "/projects/kathmandu-stories.svg",
+      "/projects/kathmandu-stories.svg"
+    ],
+    "featured": false,
+    "credits": [
+      {
+        "role": "",
+        "name": ""
+      }
+    ],
+    "updatedAt": "2026-07-18T07:31:01.619Z"
+  },
+  {
+    "id": "3",
+    "title": "The North Face: Summit",
+    "slug": "the-north-face-summit",
+    "category": "commercial",
+    "year": 2024,
+    "location": "Mustang, Nepal",
+    "description": "A brand film for The North Face blending adventure with cinematic storytelling.",
+    "coverImage": "/projects/tnf-summit.svg",
+    "images": [
+      "/projects/tnf-summit.svg",
+      "/projects/tnf-summit.svg",
+      "/projects/tnf-summit.svg"
+    ],
+    "featured": true,
+    "credits": [
+      {
+        "role": "Director",
+        "name": "Chiranjibi Khanal"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Monsoon Wedding",
+    "slug": "monsoon-wedding",
+    "category": "film",
+    "year": 2024,
+    "location": "Pokhara, Nepal",
+    "description": "A documentary-style wedding film during monsoon season.",
+    "coverImage": "/projects/monsoon-wedding.svg",
+    "images": [
+      "/projects/monsoon-wedding.svg",
+      "/projects/monsoon-wedding.svg"
+    ],
+    "featured": true
+  },
+  {
+    "id": "5",
+    "title": "Portraits of Resilience",
+    "slug": "portraits-of-resilience",
+    "category": "photography",
+    "year": 2024,
+    "location": "Kathmandu, Nepal",
+    "description": "Documenting artisans preserving traditional techniques.",
+    "coverImage": "/projects/resilience.svg",
+    "images": [
+      "/projects/resilience.svg",
+      "/projects/resilience.svg"
+    ],
+    "featured": true
+  },
+  {
+    "id": "6",
+    "title": "Wildtek Campaign",
+    "slug": "wildtek-campaign",
+    "category": "commercial",
+    "year": 2023,
+    "location": "Chitwan, Nepal",
+    "description": "A high-energy commercial for Wildtek outdoor gear.",
+    "coverImage": "/projects/wildtek.svg",
+    "images": [
+      "/projects/wildtek.svg",
+      "/projects/wildtek.svg"
+    ],
+    "featured": true
+  }
+]

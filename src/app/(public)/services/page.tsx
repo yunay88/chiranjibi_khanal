@@ -1,45 +1,47 @@
-import SectionTitle from '@/components/features/SectionTitle';
-import ScrollReveal from '@/components/features/ScrollReveal';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export const dynamic = "force-dynamic";
 
-const services = [
-  { title: 'Film', desc: 'Cinematic films for brands, documentaries, music videos, and narrative projects. From concept through post-production.' },
-  { title: 'Commercial', desc: 'High-production-value commercial content for agencies and global brands.' },
-  { title: 'Wedding', desc: 'Authentic, emotionally-driven wedding films and editorial photography.' },
-  { title: 'Portrait', desc: 'Editorial portraits and personal branding sessions with a cinematic eye.' },
-  { title: 'Post-Production', desc: 'Color grading, sound design, editing, and finishing for any project.' },
-];
+import ScrollReveal from '@/components/features/ScrollReveal';
+import { getContent } from '@/lib/content';
 
 export default function ServicesPage() {
+  const content = getContent();
+
   return (
-    <section className="min-h-screen pt-36 section container-wide">
-      <SectionTitle as="h1" label="Services" delay={0}>
-        What I do.
-      </SectionTitle>
+    <>
+      <section className="min-h-[40vh] flex items-end container-content pt-32 md:pt-40">
+        <ScrollReveal type="fadeIn" delay={0}>
+          <p className="label text-text-muted mb-4 tracking-[0.25em]">{content.services.label}</p>
+          <h1 className="section-title-large text-text leading-[0.95]">{content.services.heading}</h1>
+        </ScrollReveal>
+      </section>
 
-      <div className="mt-20 md:mt-32 space-y-0">
-        {services.map((s, i) => (
-          <ScrollReveal key={s.title} delay={i * 80}>
-            <div className="group flex items-start md:items-center justify-between py-10 md:py-12 border-t border-border cursor-default">
-              <p className="text-text" style={{ fontSize: 'clamp(36px, 4.5vw, 80px)', fontWeight: 500, lineHeight: 1.1 }}>
-                {s.title}
-              </p>
-              <div className="hidden md:block max-w-[400px]">
-                <p className="text-text-secondary text-sm leading-relaxed">{s.desc}</p>
-              </div>
-              <span className="text-text-muted group-hover:text-text transition-all duration-300 text-3xl">→</span>
-            </div>
-          </ScrollReveal>
-        ))}
-      </div>
-
-      {/* Mobile descriptions */}
-      <div className="md:hidden mt-12 space-y-6">
-        {services.map((s, i) => (
-          <ScrollReveal key={s.title} delay={i * 80}>
-            <p className="text-text-secondary text-sm leading-relaxed py-4 border-t border-border">{s.desc}</p>
-          </ScrollReveal>
-        ))}
-      </div>
-    </section>
+      <section className="section container-wide pt-0">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-8">
+          <div className="hidden md:block md:col-span-1" />
+          <div className="md:col-span-10 space-y-0">
+            {content.services.items.map((s: any, i: number) => (
+              <ScrollReveal key={s.title} delay={i * 80} type={i % 2 === 0 ? 'fadeUp' : 'fadeIn'}>
+                <div className="group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-12 border-t border-border cursor-default">
+                  <p className="text-text tracking-tight" style={{ fontSize: 'clamp(32px, 5vw, 80px)', fontWeight: 500, lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+                    {s.title}
+                  </p>
+                  <div className="hidden md:block max-w-[360px] ml-6">
+                    <p className="text-text-secondary text-sm leading-relaxed tracking-wide">{s.description}</p>
+                  </div>
+                  <span className="hidden md:block text-text-muted group-hover:text-text transition-all duration-300 text-xl ml-4">→</span>
+                </div>
+                <div className="md:hidden pb-6 -mt-2">
+                  <p className="text-text-muted text-sm leading-relaxed">{s.description}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <div className="hidden md:block md:col-span-1" />
+        </div>
+      </section>
+    </>
   );
 }
