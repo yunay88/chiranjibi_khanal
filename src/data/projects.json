@@ -114,5 +114,113 @@
       "/projects/wildtek.svg"
     ],
     "featured": true
+  },
+  {
+    "id": "1784374490808",
+    "title": "Dirt Bike",
+    "slug": "dirt-bike",
+    "category": "film",
+    "year": 2026,
+    "location": "Butwal, Nepal",
+    "description": "I shoot a music video for Topper X Cosmoxx Paraa.",
+    "coverImage": "http://localhost:3000/uploads/1784358903506-zlt6wf.png",
+    "images": [],
+    "featured": true,
+    "credits": [
+      {
+        "role": "Rapper",
+        "name": "Topper"
+      },
+      {
+        "role": "Rapper",
+        "name": "Cosmoxx Paraa"
+      },
+      {
+        "role": "Cinematographer",
+        "name": "Chiranjibi Khanal"
+      }
+    ],
+    "createdAt": "2026-07-18T11:34:50.808Z"
+  },
+  {
+    "id": "1784374493783",
+    "title": "Dirt Bike",
+    "slug": "dirt-bike",
+    "category": "film",
+    "year": 2026,
+    "location": "Butwal, Nepal",
+    "description": "I shoot a music video for Topper X Cosmoxx Paraa.",
+    "coverImage": "http://localhost:3000/uploads/1784358903506-zlt6wf.png",
+    "images": [],
+    "featured": true,
+    "credits": [
+      {
+        "role": "Rapper",
+        "name": "Topper"
+      },
+      {
+        "role": "Rapper",
+        "name": "Cosmoxx Paraa"
+      },
+      {
+        "role": "Cinematographer",
+        "name": "Chiranjibi Khanal"
+      }
+    ],
+    "createdAt": "2026-07-18T11:34:53.783Z"
+  },
+  {
+    "id": "1784374493956",
+    "title": "Dirt Bike",
+    "slug": "dirt-bike",
+    "category": "film",
+    "year": 2026,
+    "location": "Butwal, Nepal",
+    "description": "I shoot a music video for Topper X Cosmoxx Paraa.",
+    "coverImage": "http://localhost:3000/uploads/1784358903506-zlt6wf.png",
+    "images": [],
+    "featured": true,
+    "credits": [
+      {
+        "role": "Rapper",
+        "name": "Topper"
+      },
+      {
+        "role": "Rapper",
+        "name": "Cosmoxx Paraa"
+      },
+      {
+        "role": "Cinematographer",
+        "name": "Chiranjibi Khanal"
+      }
+    ],
+    "createdAt": "2026-07-18T11:34:53.956Z"
+  },
+  {
+    "id": "1784374494141",
+    "title": "Dirt Bike",
+    "slug": "dirt-bike",
+    "category": "film",
+    "year": 2026,
+    "location": "Butwal, Nepal",
+    "description": "I shoot a music video for Topper X Cosmoxx Paraa.",
+    "coverImage": "http://localhost:3000/uploads/1784358903506-zlt6wf.png",
+    "images": [],
+    "featured": true,
+    "credits": [
+      {
+        "role": "Rapper",
+        "name": "Topper"
+      },
+      {
+        "role": "Rapper",
+        "name": "Cosmoxx Paraa"
+      },
+      {
+        "role": "Cinematographer",
+        "name": "Chiranjibi Khanal"
+      }
+    ],
+    "createdAt": "2026-07-18T11:34:54.141Z"
   }
 ]

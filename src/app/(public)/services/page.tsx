@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export const dynamic = "force-dynamic";
 
 import ScrollReveal from '@/components/features/ScrollReveal';
@@ -22,7 +19,7 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-8">
           <div className="hidden md:block md:col-span-1" />
           <div className="md:col-span-10 space-y-0">
-            {content.services.items.map((s: any, i: number) => (
+            {content.services.items.map((s: { title: string; description: string }, i: number) => (
               <ScrollReveal key={s.title} delay={i * 80} type={i % 2 === 0 ? 'fadeUp' : 'fadeIn'}>
                 <div className="group flex flex-col md:flex-row md:items-center justify-between py-8 md:py-12 border-t border-border cursor-default">
                   <p className="text-text tracking-tight" style={{ fontSize: 'clamp(32px, 5vw, 80px)', fontWeight: 500, lineHeight: 1.05, letterSpacing: '-0.03em' }}>
